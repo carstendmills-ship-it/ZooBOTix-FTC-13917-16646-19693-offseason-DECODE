@@ -101,24 +101,24 @@ public class TELEOP_FieldCentric extends LinearOpMode {
          AddButtonCommand(m_driverOp, GamepadKeys.Button.Y, new CMD_AlignTarget(m_robot.drivetrain, m_robot.m_vision));
 
          // Operator
-         AddButtonCommand(m_toolOp, GamepadKeys.Button.START,
+         AddButtonCommand(m_driverOp, GamepadKeys.Button.START,
              new InstantCommand(()-> m_robot.drivetrain.setPoseEstimate(new Pose2d(0, 0, 0))));
 
-         AddButtonToggleCommand(m_toolOp, GamepadKeys.Button.X,
+         AddButtonToggleCommand(m_driverOp, GamepadKeys.Button.X,
              new InstantCommand(()-> m_robot.m_shooter.unjam())
              ,new InstantCommand(()-> m_robot.m_shooter.setShooterStop()));
 
-         AddButtonCommand(m_toolOp, GamepadKeys.Button.A, new SequentialCommandGroup(
+         AddButtonCommand(m_driverOp, GamepadKeys.Button.A, new SequentialCommandGroup(
              new InstantCommand(()-> m_robot.m_shooter.setShootingVelocity(Constants.ShooterConstants.kMidFieldVel))
              ,new CMD_ShootAuto(m_robot.m_shooter, m_robot.m_kicker, m_robot.m_intake)
          ));
 
-         AddButtonCommand(m_toolOp, GamepadKeys.Button.B, new SequentialCommandGroup(
+         AddButtonCommand(m_driverOp, GamepadKeys.Button.B, new SequentialCommandGroup(
                  new InstantCommand(()-> m_robot.m_shooter.setShootingVelocity(Constants.ShooterConstants.kFarVel))
                  ,new CMD_ShootAuto(m_robot.m_shooter, m_robot.m_kicker, m_robot.m_intake)
          ));
 
-         AddButtonCommand(m_toolOp, GamepadKeys.Button.Y, new SequentialCommandGroup(
+         AddButtonCommand(m_driverOp, GamepadKeys.Button.DPAD_UP, new SequentialCommandGroup(
                  new InstantCommand(()-> m_robot.m_shooter.setShootingVelocity(Constants.ShooterConstants.kFarthestVel))
                  ,new CMD_ShootAuto(m_robot.m_shooter, m_robot.m_kicker, m_robot.m_intake)
          ));

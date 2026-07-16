@@ -111,7 +111,7 @@ public class SUB_Shooter extends SubsystemBase {
     }
 
     public void setStopperOpen(){
-        m_stopperLeft.setPosition(150.0/300.0);
-        m_stopperRight.setPosition(150.0/300.0);
+        m_stopperLeft.setPosition(0/300.0);
+        m_stopperRight.setPosition(0/300.0);
     }
 }

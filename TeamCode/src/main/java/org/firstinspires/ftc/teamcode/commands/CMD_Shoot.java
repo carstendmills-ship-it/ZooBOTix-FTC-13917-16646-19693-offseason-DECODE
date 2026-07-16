@@ -28,6 +28,7 @@ public class CMD_Shoot extends SequentialCommandGroup {
             ,new InstantCommand(p_lift::kick)
             ,new WaitCommand(250)
             ,new InstantCommand(p_lift::home)
+                ,new InstantCommand(p_shooter::setStopperClosed)
         );
     }
 }

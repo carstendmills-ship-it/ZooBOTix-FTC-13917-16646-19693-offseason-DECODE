@@ -6,9 +6,9 @@ public class Constants {
     public static final class ShooterConstants {
         public static final boolean kTuningMode = false;
         public static final double kFarVel = 0.69;
-        public static final double kFarthestVel = 0.71;
-        public static final double kCloseVel = .55;
-        public static final double kMidFieldVel = 0.56;
+        public static final double kFarthestVel = 0.70 ;
+        public static final double kCloseVel = .70;
+        public static final double kMidFieldVel = 0.6;
         public static final double kPreRev = .45;
 
         public static final double kTolerance = 0.01;
